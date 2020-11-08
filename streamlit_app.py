@@ -3,25 +3,26 @@ import numpy as np
 import pandas as pd
 
 st.set_page_config(
-    page_title=" Cool App",
+    page_title=" Demo App",
     page_icon="🧊", # EP: how did they find a symbol?
-    #layout="wide",
+    layout="wide",
     initial_sidebar_state="expanded",
 )
 
-def md_url(text, url):
+def md_link(text: str, url: str):
    return f"[{text}]({url})"
 
 def api_docs(anchor):
    url = f"https://docs.streamlit.io/en/stable/api.html#{anchor}"
    text = f"docs - {anchor}"
    st.markdown("---")
-   st.markdown(md_url(text, url))   
+   st.markdown(md_link(text, url))   
 
-#st.sidebar.title("This is sidebar")
+st.sidebar.title("This is sidebar")
 
 st.title("Let's try Streamlit")
-st.write('Streamlit is a great way to make a data dashboard, interactive or not.')
+st.markdown('[Streamlit](https://www.streamlit.io/) is a great way to make a dashboard, '
+            'interactive or not.')
 
 col_a, col_b = st.beta_columns(2)
 
@@ -43,7 +44,7 @@ with col_b:
 - [Flask][flask] without template setup
 - Rstudio's [Shiny][shiny] in Python, with hosting
 - another way to use [Plotly Dash](https://plotly.com/dash/) and [Bokeh](https://docs.bokeh.org/en/latest/index.html)
-- 'iPhone of Python'
+- the 'iPhone of Python'
 
 [shiny]: https://shiny.rstudio.com/
 [pluto]: https://github.com/fonsp/Pluto.jl
@@ -171,14 +172,11 @@ st.map(map_data)
 st.header('Notes and discussion')
 
 """ 
-#### Limitations
+#### Limitations and feature requests
 
-- cannot add html directly (safety concern)
+- cannot add raw html directly (safety concern)
 - no obvious way to persist the result as html 
-
-#### Feature request
-
-- table of contents (TOC)
+- table of contents (see below)
 
 #### Mind model
 
