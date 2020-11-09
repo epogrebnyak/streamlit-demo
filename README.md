@@ -1,3 +1,5 @@
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/epogrebnyak/streamlit-demo/main)
+
 # streamlit-demo
 Dashboard to explore [Streamlit](https://docs.streamlit.io/en/stable/) possibilities (Jupyter+Handout+Pluto+Flask+Shiny+Dash+Bokeh)
 
